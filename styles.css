@@ -146,6 +146,9 @@ body {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
   font-family: var(--font-serif);
   font-size: 1.75rem;
   font-weight: 700;
@@ -153,6 +156,14 @@ body {
   color: var(--color-text);
   text-decoration: none;
   position: relative;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 24px rgba(230, 57, 70, 0.28);
 }
 
 .brand::after {
@@ -1551,6 +1562,11 @@ body {
 
   .nav-container {
     padding: 1rem 1.5rem;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
   }
 
   .skills-bento {
