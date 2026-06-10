@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bagio — Backend Engineer & AI/ML Portfolio</title>
+  <meta name="description" content="Portfolio of Bagio — Software Engineer specializing in backend architecture, distributed systems, and AI/ML integration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- Navigation -->
+  <nav class="topbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a class="brand" href="#" aria-label="Bagio Home">Bagio</a>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="navLinks" role="menubar">
+        <a href="#about" role="menuitem">About</a>
+        <a href="#skills" role="menuitem">Skills</a>
+        <a href="#work" role="menuitem">Work</a>
+        <a href="#testimonials" role="menuitem">Testimonials</a>
+        <a href="#contact" role="menuitem">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Hero Section -->
+  <header class="hero" role="banner">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div class="hero-main fade-up">
+        <span class="eyebrow">Backend Engineer</span>
+        <h1>Building scalable systems &amp; AI-powered products.</h1>
+        <div class="hero-typing">
+          <span id="typingText" aria-label="Cycling roles"></span>
+          <span class="typing-cursor" aria-hidden="true">|</span>
+        </div>
+        <p class="hero-text">I design backend architectures, distributed platforms, and AI-enabled operations with clean APIs and thoughtful user experiences.</p>
+        <div class="hero-actions">
+          <a href="#work" class="button button-primary">View Projects</a>
+          <a href="#contact" class="button button-secondary">Get in Touch</a>
+        </div>
+      </div>
+
+      <!-- Bento Glass Panel -->
+      <div class="bento-panel fade-up stagger-1" role="complementary" aria-label="Core strengths">
+        <div class="glass-card strengths-card">
+          <span class="panel-label">Core Strengths</span>
+          <ul class="strength-list">
+            <li>
+              <span class="strength-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </span>
+              <span>Backend Architecture</span>
+            </li>
+            <li>
+              <span class="strength-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </span>
+              <span>Distributed Systems</span>
+            </li>
+            <li>
+              <span class="strength-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 12l8.66-5"/></svg>
+              </span>
+              <span>AI/ML Integration</span>
+            </li>
+            <li>
+              <span class="strength-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </span>
+              <span>Design Systems</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bento Stats Grid -->
+      <div class="bento-stats">
+        <div class="glass-card stat-glass fade-up stagger-2">
+          <span class="stat-value" data-count="10" data-suffix="+" aria-label="10 plus projects delivered">0</span>
+          <span class="stat-label">Projects delivered</span>
+        </div>
+        <div class="glass-card stat-glass fade-up stagger-3">
+          <span class="stat-value" data-count="3" data-suffix="+" aria-label="3 plus years engineering">0</span>
+          <span class="stat-label">Years engineering</span>
+        </div>
+        <div class="glass-card stat-glass wide fade-up stagger-1">
+          <span class="stat-value" data-count="4" aria-label="4 languages">0</span>
+          <span class="stat-label">Languages</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- About Section -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">About</span>
+          <h2 id="about-heading">Modern systems with practical UX.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text fade-up">
+            <p>I am a software engineer focused on backend architectures, distributed platforms, and AI-enabled operations. I pair strong technology choices with interface clarity so teams and users can move faster.</p>
+            <p>My work emphasizes reliability, clean APIs, and user-friendly flows. I enjoy translating technical complexity into intuitive experiences for real projects.</p>
+          </div>
+          <div class="about-visual fade-up stagger-1" aria-hidden="true">
+            <div class="glass-card code-preview">
+              <div class="code-header">
+                <span class="code-dot red"></span>
+                <span class="code-dot yellow"></span>
+                <span class="code-dot green"></span>
+                <span class="code-filename">architecture.md</span>
+              </div>
+              <pre class="code-body"><code><span class="code-kw">class</span> <span class="code-class">System</span>:
+  <span class="code-kw">def</span> <span class="code-func">__init__</span>(self):
+    self.scale = <span class="code-str">"horizontal"</span>
+    self.ai_ready = <span class="code-bool">True</span>
+
+  <span class="code-kw">def</span> <span class="code-func">ship</span>(self):
+    <span class="code-kw">return</span> <span class="code-str">"reliable"</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section (Bento Grid) -->
+    <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Tech Stack</span>
+          <h2 id="skills-heading">Tools &amp; technologies I work with.</h2>
+        </div>
+        <div class="bento-grid skills-bento" role="list" aria-label="Skills and technologies">
+          <!-- Large card -->
+          <div class="bento-item bento-large glass-card fade-up stagger-1" role="listitem">
+            <div class="bento-content">
+              <span class="bento-tag">Primary</span>
+              <h3>Backend Architecture</h3>
+              <p>Designing scalable microservices, RESTful APIs, and event-driven systems with clean separation of concerns.</p>
+              <div class="skill-bar" data-progress="92">
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                <span class="skill-bar-label">Proficiency</span>
+              </div>
+              <div class="tech-row">
+                <span class="tech-pill">Go</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Kafka</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medium card -->
+          <div class="bento-item bento-medium glass-card fade-up stagger-2" role="listitem">
+            <div class="bento-content">
+              <span class="bento-tag">ML</span>
+              <h3>AI / ML</h3>
+              <p>Building intelligent pipelines with PyTorch, LangChain, and RAG architectures.</p>
+              <div class="skill-bar" data-progress="78">
+                <div class="skill-bar-track"><div class="skill-bar-fill"></div></div>
+                <span class="skill-bar-label">Proficiency</span>
+              </div>
+              <div class="tech-row">
+                <span class="tech-pill">PyTorch</span>
+                <span class="tech-pill">LangChain</span>
+                <span class="tech-pill">ResNet</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Small cards -->
+          <div class="bento-item glass-card fade-up stagger-3" role="listitem">
+            <div class="bento-content centered">
+              <span class="bento-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </span>
+              <h3>Databases</h3>
+              <div class="tech-row">
+                <span class="tech-pill">MongoDB</span>
+                <span class="tech-pill">PostgreSQL</span>
+                <span class="tech-pill">Redis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-item glass-card fade-up stagger-1" role="listitem">
+            <div class="bento-content centered">
+              <span class="bento-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <h3>DevOps</h3>
+              <div class="tech-row">
+                <span class="tech-pill">Docker</span>
+                <span class="tech-pill">CI/CD</span>
+                <span class="tech-pill">GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wide card -->
+          <div class="bento-item bento-wide glass-card fade-up stagger-2" role="listitem">
+            <div class="bento-content">
+              <span class="bento-tag">Design</span>
+              <h3>Design Systems</h3>
+              <p>Creating consistent, accessible UI components and design tokens that scale across products and teams.</p>
+              <div class="tech-row">
+                <span class="tech-pill">CSS</span>
+                <span class="tech-pill">Tailwind</span>
+                <span class="tech-pill">Figma</span>
+                <span class="tech-pill">a11y</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Selected Work</span>
+          <h2 id="work-heading">Projects built for clarity and scale.</h2>
+        </div>
+        <div class="projects-grid" role="list" aria-label="Selected projects">
+          <article class="project-card glass-card fade-up stagger-1" role="listitem" data-project="rag"
+            data-project-title="RAG-as-a-Service"
+            data-project-badge="AI Platform"
+            data-project-desc="A comprehensive data pipeline and retrieval-augmented generation platform built with microservices architecture, featuring an API gateway, document intelligence pipeline, and vector search capabilities."
+            data-project-tech="Go,Kafka,LangChain,Docker,Kubernetes,PostgreSQL"
+            data-project-details="• Designed and implemented microservices architecture with service mesh
+• Built real-time document ingestion pipeline processing 10K+ documents/day
+• Integrated LangChain for LLM orchestration and prompt management
+• Deployed on Kubernetes with auto-scaling and health monitoring">
+            <div class="project-header">
+              <div class="project-meta">
+                <span class="project-title">RAG-as-a-Service</span>
+                <span class="project-badge">AI Platform</span>
+              </div>
+              <span class="project-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </span>
+            </div>
+            <p class="project-desc">A data pipeline and retrieval-augmented generation platform with microservices, API gateway, and document intelligence.</p>
+            <div class="chip-row">
+              <span class="chip">Go</span>
+              <span class="chip">Kafka</span>
+              <span class="chip">LangChain</span>
+              <span class="chip">Docker</span>
+            </div>
+          </article>
+
+          <article class="project-card glass-card fade-up stagger-2" role="listitem" data-project="bird"
+            data-project-title="Bird Species Classifier"
+            data-project-badge="ML Research"
+            data-project-desc="A high-accuracy PyTorch image classification model using ResNet fine-tuning for reliable bird species recognition and automated quality evaluation."
+            data-project-tech="PyTorch,ResNet,Python,Jupyter,NumPy,OpenCV"
+            data-project-details="• Achieved 94.2% accuracy on 200+ bird species dataset
+• Implemented transfer learning with ResNet-50 backbone
+• Built custom data augmentation pipeline for robust training
+• Deployed inference API with sub-100ms response time">
+            <div class="project-header">
+              <div class="project-meta">
+                <span class="project-title">Bird Species Classifier</span>
+                <span class="project-badge">ML Research</span>
+              </div>
+              <span class="project-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </span>
+            </div>
+            <p class="project-desc">A PyTorch image classifier with ResNet fine-tuning, used for reliable species recognition and quality evaluation.</p>
+            <div class="chip-row">
+              <span class="chip">PyTorch</span>
+              <span class="chip">ResNet</span>
+              <span class="chip">Python</span>
+              <span class="chip">Jupyter</span>
+            </div>
+          </article>
+
+          <article class="project-card glass-card fade-up stagger-3" role="listitem" data-project="restaurant"
+            data-project-title="Restaurant Reviews API"
+            data-project-badge="Backend Service"
+            data-project-desc="A production-ready REST API service with comprehensive endpoint reliability, input validation, automated testing, and CI/CD pipeline for review management workflows."
+            data-project-tech="Node.js,Express,MongoDB,Jest,GitHub Actions,Docker"
+            data-project-details="• Built RESTful API with 25+ endpoints and OpenAPI documentation
+• Implemented JWT authentication and role-based access control
+• Achieved 95%+ test coverage with Jest and Supertest
+• Set up GitHub Actions CI/CD with auto-deployment to staging">
+            <div class="project-header">
+              <div class="project-meta">
+                <span class="project-title">Restaurant Reviews API</span>
+                <span class="project-badge">Backend Service</span>
+              </div>
+              <span class="project-arrow" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </span>
+            </div>
+            <p class="project-desc">A REST service with endpoint reliability, validation, and CI/CD for review workflows and operational reporting.</p>
+            <div class="chip-row">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">Jest</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section section-alt" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Testimonials</span>
+          <h2 id="testimonials-heading">Trusted by teams and collaborators.</h2>
+        </div>
+        <div class="testimonials-grid" role="list" aria-label="Testimonials">
+          <blockquote class="testimonial-glass glass-card fade-up stagger-1" role="listitem">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p>Bagio delivers backend systems that are stable, performant, and easier to maintain. His work improves both developer velocity and product reliability.</p>
+            <footer>
+              <span class="quote-line" aria-hidden="true"></span>
+              <cite>Project Lead, SaaS Platform</cite>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-glass glass-card fade-up stagger-2" role="listitem">
+            <div class="quote-mark" aria-hidden="true">"</div>
+            <p>A strong engineer with a great eye for how architecture affects product experience. His code and documentation are both clean and practical.</p>
+            <footer>
+              <span class="quote-line" aria-hidden="true"></span>
+              <cite>AI Product Manager</cite>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="eyebrow">Contact</span>
+          <h2 id="contact-heading">Want to connect?</h2>
+        </div>
+        <div class="contact-glass glass-card fade-up">
+          <div class="contact-body">
+            <p>Open to backend roles, freelance work, and AI-enabled product collaborations. Prefer Discord? Reach me at <strong>bagio_01</strong>.</p>
+          </div>
+          <div class="contact-actions">
+            <a href="mailto:mohamedfouhamy4@gmail.com" class="button button-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+            <a href="https://github.com/Bagio1" target="_blank" rel="noopener noreferrer" class="button button-secondary" aria-label="View GitHub profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0.297c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.612-4.042-1.612-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.76-1.605-2.665-.303-5.466-1.333-5.466-5.93 0-1.31.47-2.382 1.235-3.22-.125-.303-.535-1.523.115-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.655 1.653.245 2.873.12 3.176.77.838 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.21.695.825.577 4.765-1.587 8.2-6.085 8.2-11.387 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://discord.com/users/bagio_01" target="_blank" rel="noopener noreferrer" class="button button-discord" aria-label="Discord username bagio_01">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.36 3c-.22.39-.47.91-.64 1.32a18.3 18.3 0 0 0-5.48 0A13.9 13.9 0 0 0 8.59 3a19.7 19.7 0 0 0-4.96 1.38C.49 9.08-.36 13.66.06 18.18A19.9 19.9 0 0 0 6.14 21.2c.49-.66.92-1.36 1.3-2.1-.72-.27-1.4-.61-2.05-1.01.17-.13.34-.26.5-.39a14.2 14.2 0 0 0 12.22 0l.5.39c-.65.4-1.33.74-2.05 1.01.38.74.81 1.44 1.3 2.1a19.9 19.9 0 0 0 6.08-3.02c.5-5.23-.86-9.77-3.62-13.81zM8.02 15.41c-1.18 0-2.14-1.08-2.14-2.41s.94-2.42 2.14-2.42c1.2 0 2.16 1.09 2.14 2.42 0 1.33-.94 2.41-2.14 2.41zm7.96 0c-1.18 0-2.14-1.08-2.14-2.41s.94-2.42 2.14-2.42c1.2 0 2.16 1.09 2.14 2.42 0 1.33-.94 2.41-2.14 2.41z"/></svg>
+              Discord
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Modal -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-content glass-card">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+      </button>
+      <span class="modal-badge" id="modalBadge"></span>
+      <h3 id="modalTitle" class="modal-title"></h3>
+      <p id="modalDesc" class="modal-desc"></p>
+      <div class="modal-section">
+        <h4>Key Details</h4>
+        <pre id="modalDetails" class="modal-details"></pre>
+      </div>
+      <div class="modal-section">
+        <h4>Tech Stack</h4>
+        <div id="modalTech" class="chip-row"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Bagio — Backend Systems, AI-Aware Execution.</p>
+      <a href="https://github.com/Bagio1" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="footer-icon"><path fill="currentColor" d="M12 0.297c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.612-4.042-1.612-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.76-1.605-2.665-.303-5.466-1.333-5.466-5.93 0-1.31.47-2.382 1.235-3.22-.125-.303-.535-1.523.115-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.655 1.653.245 2.873.12 3.176.77.838 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.81 1.102.81 2.222 0 1.606-.015 2.896-.015 3.286 0 .32.21.695.825.577 4.765-1.587 8.2-6.085 8.2-11.387 0-6.627-5.373-12-12-12z"/></svg>
+        <span>Bagio1</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
